@@ -1,9 +1,14 @@
 .App {
-  text-align: center;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  flex-grow: 1;
+  height: 100%;
+  background-color: #21232b;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -13,12 +18,24 @@
   }
 }
 
+.Account {
+  position: absolute;
+  padding-left: 1em;
+  padding-bottom: 5em;
+}
+.BriefAbout {
+  position: absolute;
+  padding-left: 1em;
+  padding-bottom: 3em;
+  font-size: medium;
+}
+
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -26,6 +43,10 @@
 
 .App-link {
   color: #61dafb;
+  font-size: medium;
+  position: absolute;
+  padding-bottom: 0em;
+  padding-left: 1em;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +56,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.TabContainer{
+  position: fixed;
+  width: 100%;
 }
