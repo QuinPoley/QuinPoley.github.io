@@ -1,64 +1,310 @@
-.App {
-  text-align: left;
-  position: relative;
-  width: 100%;
-  flex-grow: 1;
-  height: 100%;
-  background-color: #21232b;
-}
-
-.App-logo {
-  height: 20vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.Account {
-  position: absolute;
-  padding-left: 1em;
-  padding-bottom: 5em;
-}
-.BriefAbout {
-  position: absolute;
-  padding-left: 1em;
-  padding-bottom: 3em;
-  font-size: medium;
-}
-
-.App-header {
-  position: relative;
-  min-height: 30vh;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.title{
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-  font-size: medium;
+  font-size: 230%;
+  display: flex;
   position: absolute;
-  padding-bottom: 0em;
-  padding-left: 1em;
+  top: 5px;
+  left: 50px;
+  font: "bold fantasy";
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.photo{
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+  background-image: "./Images/photo.jpg";
+  border: 2px solid black;
 }
-
-.TabContainer{
-  position: fixed;
+.page{
+  background-color: #484a4d;
+  height: 100%;
+  position: absolute;
   width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  z-index: 100;
+}
+.aboutdiv{
+  position: relative;
+  width: 100%;
+  height: 22%;
+  overflow: hidden;
+}
+.projdiv{
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  height: 30%;
+}
+.certdiv{
+  position: absolute;
+  width: 100%;
+  min-height: 22%;
+  overflow: hidden;
+}
+.certheader{
+  background-color: black;
+  width: 100%;
+  min-height: 32px;
+  max-height: 32px;
+  color: white;
+  font-size: larger;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+}
+.CertImage{
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  height: 100px;
+  width: 100px;
+  border-radius: 2px;
+}
+.certnav{
+  position: relative;
+  top: 32px;
+  max-width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.CertTitle{
+  position: absolute;
+  top:10px;
+  left:30%;
+}
+.CertDesc{
+  position: absolute;
+  top:35px;
+  left:32%;
+  font-size: small;
+}
+.certcomponent{
+  position: relative;
+  border-radius: 5%;
+  top: 0%;
+  max-width: 500px;
+  min-width: 500px;
+  min-height: 150px;
+  max-height: 150px;
+}
+.RepoTitle{
+  color: red;
+  position: absolute;
+  top: 5%;
+  align-items: center;
+}
+.RepoDesc{
+  color: red;
+  position: absolute;
+  top: 85%;
+  align-items: center;
+}
+.projectnav{
+  position: relative;
+  top: 1%;
+  max-width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: flex-start;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.projheader{
+  background-color: black;
+  min-width: 100%;
+  height: 10%;
+  color: white;
+  font-size: larger;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+}
+.ProjImage{
+  position: relative;
+  top: 13%;
+  height: 70%;
+  width: 70%;
+  border-radius: 2%;
+}
+.projcomponent{
+  position: relative;
+  top: 10%;
+  min-width: 350px;
+  max-width: 350px;
+  height: 90%;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+}
+.navbar{
+  height: var(--nav-size);
+  background-color: var(--bg);
+  padding: 0 1rem;
+  border-bottom: var(--border);
+  z-index: 150;
+}
+
+.navbar-nav{
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-item{
+  width: calc(var(--nav-size)*0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button{
+  --button-size: calc(var(--nav-size)*0.5);
+  width: var(--button-size);
+  height: var(--button-size);
+  background-color: #484a4d;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 300ms;
+}
+
+.icon-button:hover{
+  filter: brightness(1.2);
+}
+
+.icon-button svg{
+  fill: var(--text-color);
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown{
+  position: absolute;
+  top:58px;
+  width: 300px;
+  transform: translateX(-45%);
+  background-color: var(--bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  overflow: hidden;
+  transition: height var(--speed) ease;
+  z-index: 200;
+}
+
+.menu-item{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  transition: background var(--speed);
+  padding: 0.5rem;
+}
+
+.menu-item:hover{
+  background-color: #525357;
+}
+.icon-right{
+  margin-left: auto;
+}
+.icon-right svg{
+  fill: var(--text-color);
+  width: 20px;
+  height: 20px;
+  justify-content: right;
+  align-items: center;
+}
+
+
+.menu-primary-enter{
+  position: absolute;
+  transform: translateX(-110%);
+}
+.menu-primary-enter-active{
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-primary-exit{
+  position:absolute;
+}
+.menu-primary-exit-active{
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+.menu-secondary-enter{
+  transform: translateX(110%);
+}
+.menu-secondary-enter-active{
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-secondary-exit-active{
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}
+
+.SelectedInView{
+  position: absolute;
+  top:65px;
+  left: 165px;
+  width: 300px;
+  height: 600px;
+  transform: translateX(-45%);
+  background-color: var(--bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  overflow: hidden;
+  color: var(--text-color);
+}
+.button{
+  width: 15px;
+  height: 15px;
+  background-color: #484a4d;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 300ms;
+  position: absolute;
+  top : 10px;
+  left: 295px;
+
+}
+.button:hover{
+  filter: brightness(1.2); 
+}
+
+.button svg{
+  fill: var(--text-color);
+  width: 20px;
+  height: 20px;
+}
+
+.helperpanel{
+  position: absolute;
+  top:710px;
+  left: 165px;
+  width: 300px;
+  height: 500px;
+  transform: translateX(-45%);
+  background-color: var(--bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  overflow: hidden;
+  color: var(--text-color);
 }
