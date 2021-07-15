@@ -7,6 +7,15 @@ import { ReactComponent as Caret } from './Icons/caret.svg';
 import { ReactComponent as Chevron } from './Icons/chevron.svg';
 import { ReactComponent as Arrow } from './Icons/arrow.svg';
 import picture from './Images/photo.jpg';
+import ChessGame from './Images/ChessGame.jpg';
+import MyPage from './Images/MyPage.JPG';
+import Blender from './Images/Blender.JPG';
+import Snake from './Images/Snake.JPG';
+import AWS from './Images/aws.jpg';
+import Scrum from './Images/scrum.jpg'
+//
+//
+//
 import { func } from 'prop-types';
 
 function App() {
@@ -23,10 +32,14 @@ function App() {
           <Photo></Photo>
         </About>
         <ProjectDiv>
-          <Project></Project>
+          <ProjectComponent name="Chess" desc="A chess game in python" image={ChessGame} link="#"></ProjectComponent>
+          <ProjectComponent name="AWSBlenderResources" desc="New Blender resources" image={Blender} link="#"></ProjectComponent>
+          <ProjectComponent name="Snake" desc="A snake game in python" image={Snake} link="#"></ProjectComponent>
+          <ProjectComponent name="Other" desc="Other projects" image={MyPage} link="#"></ProjectComponent>
         </ProjectDiv>
         <CertDiv>
-          <Cert></Cert>
+          <CertComponent link="#" name="AWS Certified Solution Architect - Associate" desc="Issued July 2020 - Expires July 2023" image={AWS}></CertComponent>
+          <CertComponent link="#" name="Certified ScrumMaster (CSM)" desc="Issued June 2021 - Expires June 2023" image={Scrum}></CertComponent>
         </CertDiv>
       </Page>
     </div>
@@ -41,18 +54,41 @@ function About(props){
     </div>
   );
 }
+function ProjectComponent(props){
+  return(
+    <a href={props.link}>
+      <li className="projcomponent">
+          <div className="RepoTitle">{props.name}</div>
+          <img className="ProjImage" src={props.image}/>
+          <div className="RepoDesc">{props.desc}</div>
+      </li>
+    </a>
+  );
+}
 function ProjectDiv(props){
   return(
-    <div className="aboutdiv">
-      {props.children}
+    <div className="projdiv">
+      <Project></Project>
+      <ul className="projectnav">{props.children}</ul>
     </div>
   );
 }
-
+function CertComponent(props){
+  return(
+    <a href={props.link}>
+      <li className="certcomponent">
+          <img className="CertImage" src={props.image}/>
+          <div className="CertTitle">{props.name}</div>
+          <div className="CertDesc">{props.desc}</div>
+      </li>
+    </a>
+  );
+}
 function CertDiv(props){
   return(
-    <div className="aboutdiv">
-      {props.children}
+    <div className="certdiv">
+      <Cert></Cert>
+      <ul className="certnav">{props.children}</ul>
     </div>
   );
 }
@@ -60,7 +96,7 @@ function CertDiv(props){
 
 function Project(){
   return (
-    <div className="projheader"><p>Projects</p></div>
+    <div className="projheader">Projects</div>
   );
 }
 function Photo(){
@@ -70,7 +106,7 @@ function Photo(){
 }
 function Cert(){
   return(
-    <div className="certheader"><p>Certifications</p></div>
+    <div className="certheader">Certifications</div>
   );
 }
 function Page(props){
