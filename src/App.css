@@ -1,16 +1,43 @@
 .title{
   color: white;
-  font-size: 230%;
+  font-size: 2.7vmax;
   display: flex;
   position: absolute;
-  top: 5px;
-  left: 50px;
+  top: 1vmin;
+  left: 23vmin;
   font: "bold fantasy";
+}
+.backdrop{
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  z-index: -1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.backtwo{
+  width: 50%;
+  min-width: 350px;
+  height: 100%;
+  background-color: #484a4d;
+  border-radius: 3%;
+  border: 2px solid #595c5f;
+}
+.aboutme{
+  color: white;
+  font-size: 1.5vmin;
+  position: absolute;
+  top: 5.3vmin;
+  left: 26vmin;
 }
 .photo{
   position: absolute;
   top: 10px;
-  left: 20px;
+  left: 1.7vw;
+  min-width: 80px;
+  min-height: 80px;
   width: 20vmin;
   height: 20vmin;
   border-radius: 50%;
@@ -22,76 +49,114 @@
   height: 100%;
   position: absolute;
   width: 100%;
-  overflow-y: hidden;
-  overflow-x: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   z-index: 100;
+  display: inline;
+  align-items: center;
+  justify-content: center;
 }
 .aboutdiv{
   position: relative;
   width: 100%;
+  min-height: 10vmax;
   height: 22%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Aboutmesection{
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  min-width: 50%;
+  max-width: 50%;
+  position: absolute;
+  left: center;
+
 }
 .projdiv{
   position: relative;
   width: 100%;
-  min-height: 300px;
+  min-height: 340px;
   height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .certdiv{
   position: absolute;
   width: 100%;
-  min-height: 22%;
+  height: 30vh;
+  min-height: 100px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 .certheader{
   background-color: black;
-  width: 100%;
-  min-height: 32px;
-  max-height: 32px;
+  min-width: 350px;
+  width: 50%;
+  min-height: 42px;
+  max-height: 42px;
   color: white;
-  font-size: larger;
+  font-size: 190%;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 0%;
+  text-align: center;
+  border-radius: 5%;
 }
 .CertImage{
   position: absolute;
-  left: 25px;
-  top: 25px;
-  height: 100px;
-  width: 100px;
+  left: 1.5vw;
+  top: 1.5vh;
+  height: 10vmin;
+  width: 10vmin;
+  max-height: 100px;
+  max-width: 100px;
   border-radius: 2px;
 }
 .certnav{
-  position: relative;
-  top: 32px;
-  max-width: 100%;
+  position: absolute;
+  top: 42px;
+  min-width: 250px;
+  width: 50%;
   height: 90%;
-  display: flex;
+  display: flexbox;
   justify-content: flex-start;
-  overflow: hidden;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .CertTitle{
   position: absolute;
   top:10px;
-  left:30%;
+  left:12vmin;
+  font-size: 0.8vmax;
 }
 .CertDesc{
   position: absolute;
-  top:35px;
-  left:32%;
-  font-size: small;
+  top:3vh;
+  left:13vmin;
+  font-size: 0.7vmax;
 }
 .certcomponent{
   position: relative;
   border-radius: 5%;
   top: 0%;
-  max-width: 500px;
+  max-width: 167px;
+  width: 5vw;
   min-width: 500px;
-  min-height: 150px;
+  min-height: 50px;
+  height: 13vh;
   max-height: 150px;
+  align-self: flex-start;
 }
 .RepoTitle{
   color: red;
@@ -107,8 +172,9 @@
 }
 .projectnav{
   position: relative;
-  top: 1%;
-  max-width: 100%;
+  top: 20px;
+  min-width: 350px;
+  width: 50%;
   height: 90%;
   display: flex;
   justify-content: flex-start;
@@ -117,14 +183,19 @@
 }
 .projheader{
   background-color: black;
-  min-width: 100%;
-  height: 10%;
+  min-width: 350px;
+  width: 50%;
+  min-height: 42px;
+  max-height: 42px;
   color: white;
-  font-size: larger;
+  font-size: 190%;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 0%;
+  text-align: center;
+  border-radius: 5%;
+  
 }
 .ProjImage{
   position: relative;
@@ -148,7 +219,7 @@
   background-color: var(--bg);
   padding: 0 1rem;
   border-bottom: var(--border);
-  z-index: 150;
+  z-index: 1500;
 }
 
 .navbar-nav{
