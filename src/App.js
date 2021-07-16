@@ -3,6 +3,7 @@ import './App.css';
 import SimpleTabs from './TabsPanel';
 import {CSSTransition} from 'react-transition-group';
 import { ReactComponent as Github } from './Icons/Github.svg';
+import { ReactComponent as LinkedIn } from './Icons/linkedin.svg';
 import { ReactComponent as Caret } from './Icons/caret.svg';
 import { ReactComponent as Chevron } from './Icons/chevron.svg';
 import { ReactComponent as Arrow } from './Icons/arrow.svg';
@@ -23,11 +24,10 @@ function App() {
     <div className="App">
       <NavBar>
         <NavBarItem icon={<Github />} link="https://github.com/QuinPoley"/>
-        <NavBarItem icon={<Caret />}>
-          <DropdownMenu></DropdownMenu>
-        </NavBarItem>
+        <NavBarItem icon={<LinkedIn />} link="https://www.linkedin.com/in/quinlan-poley-85ba6816a/"/>
       </NavBar>
       <Page>
+        <div className="backdrop"><div className="backtwo"></div></div>
         <About>
           <Photo></Photo>
         </About>
@@ -35,6 +35,10 @@ function App() {
           <ProjectComponent name="Chess" desc="A chess game in python" image={ChessGame} link="#"></ProjectComponent>
           <ProjectComponent name="AWSBlenderResources" desc="New Blender resources" image={Blender} link="#"></ProjectComponent>
           <ProjectComponent name="Snake" desc="A snake game in python" image={Snake} link="#"></ProjectComponent>
+          <ProjectComponent name="Soccer Quizzes" desc="Web app using FASTAPI" link="#"></ProjectComponent>
+          <ProjectComponent name="Lestrade" desc="Extension of sherlock" link="#"></ProjectComponent>
+          <ProjectComponent name="HMAC Port Knock" desc="Port Knocking with stream cypher" link="#"></ProjectComponent>
+          <ProjectComponent name="WebGL" desc="Website combining react and threejs" link="#"></ProjectComponent>
           <ProjectComponent name="Other" desc="Other projects" image={MyPage} link="#"></ProjectComponent>
         </ProjectDiv>
         <CertDiv>
@@ -49,8 +53,11 @@ function App() {
 function About(props){
   return(
     <div className="aboutdiv">
+      <div className="Aboutmesection">
+      <div className="title">Quin Poley</div>
+      <div className="aboutme"><p>Cloud, Security, and Ml</p><p>2021 B.S. Albright College - Computer Science and Biology</p><p>Software Engineer at Unisys</p></div>
       {props.children}
-      <></>
+      </div>
     </div>
   );
 }
@@ -190,7 +197,6 @@ function NavBar(props){
 
 return(
   <nav className="navbar">
-    <div className="title">Quin Poley</div>
     <ul className="navbar-nav">{props.children}</ul>
   </nav>
 )
