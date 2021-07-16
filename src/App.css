@@ -138,13 +138,13 @@
   position: absolute;
   top:10px;
   left:12vmin;
-  font-size: 0.8vmax;
+  font-size: 0.67vmax;
 }
 .CertDesc{
   position: absolute;
   top:3vh;
   left:13vmin;
-  font-size: 0.7vmax;
+  font-size: 0.6vmax;
 }
 .certcomponent{
   position: relative;
