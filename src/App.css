@@ -45,7 +45,7 @@
   border: 2px solid black;
 }
 .page{
-  background-color: #484a4d;
+  background-color: black;
   height: 100%;
   position: absolute;
   width: 100%;
@@ -55,6 +55,7 @@
   display: inline;
   align-items: center;
   justify-content: center;
+  overscroll-behavior: contain;
 }
 .aboutdiv{
   position: relative;
@@ -70,7 +71,8 @@
   justify-content: center;
   align-items: center;
   min-height: 100%;
-  min-width: 50%;
+  min-width: 350px;
+  width: 50%;
   max-width: 50%;
   position: absolute;
   left: center;
@@ -121,19 +123,22 @@
   max-width: 100px;
   border-radius: 2px;
 }
+
 .certnav{
   position: absolute;
   top: 42px;
   min-width: 250px;
   width: 50%;
+  min-height: 300px;
   height: 90%;
-  display: flexbox;
-  justify-content: flex-start;
+  display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
+  flex-direction: row;
   overflow-y: auto;
   overflow-x: hidden;
 }
+
 .CertTitle{
   position: absolute;
   top:10px;
@@ -150,13 +155,14 @@
   position: relative;
   border-radius: 5%;
   top: 0%;
-  max-width: 167px;
-  width: 5vw;
+  width: 50%;
   min-width: 500px;
   min-height: 50px;
   height: 13vh;
   max-height: 150px;
   align-self: flex-start;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 .RepoTitle{
   color: red;
@@ -378,4 +384,22 @@
   padding: 1rem;
   overflow: hidden;
   color: var(--text-color);
+}
+
+@media only screen and (max-width: 600px) {
+  .certdiv {
+    height: 450px;
+  }
+  .certnav {
+    height: 150px;
+  }
+  .photo {
+    left: 0px;
+    top: 0px;
+    width: 10vmax;
+    height: 10vmax;
+  }
+  .backdrop{
+    height: 150%;
+  }
 }
