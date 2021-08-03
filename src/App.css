@@ -115,10 +115,12 @@
 }
 .CertImage{
   position: absolute;
-  left: 1.5vw;
+  left: 5px;
   top: 1.5vh;
   height: 10vmin;
   width: 10vmin;
+  min-width: 100px;
+  min-height: 100px;
   max-height: 100px;
   max-width: 100px;
   border-radius: 2px;
@@ -140,23 +142,27 @@
 }
 
 .CertTitle{
-  position: absolute;
+  position: relative;
   top:10px;
   left:12vmin;
-  font-size: 0.67vmax;
+  width: 240px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .CertDesc{
-  position: absolute;
-  top:3vh;
+  position: relative;
+  top:3.7vh;
   left:13vmin;
   font-size: 0.6vmax;
+  width: 235px;
+  word-wrap: break-word;
 }
 .certcomponent{
   position: relative;
   border-radius: 5%;
   top: 0%;
+  min-width: 450px;
   width: 50%;
-  min-width: 500px;
   min-height: 50px;
   height: 13vh;
   max-height: 150px;
@@ -401,5 +407,31 @@
   }
   .backdrop{
     height: 150%;
+  }
+  .CertTitle{
+    left: 110px;
+    width: 200px;
+  }
+  .CertDesc{
+    left: 115px;
+    width: 190px;
+  }
+}
+
+@media only screen and (max-width: 1800px) {
+  .certdiv{
+    height: 1000px;
+  }
+  .certnav {
+    height: 700px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .backdrop{
+    height: calc(100% + 451px);
+  }
+  .backtwo{
+    height: calc(100% + 350px);
   }
 }

@@ -34,19 +34,20 @@ function App() {
           <Photo></Photo>
         </About>
         <ProjectDiv>
-          <ProjectComponent name="Soccer Quizzes" desc="Web app using FASTAPI" link="#" image={soccerquiz}></ProjectComponent>
-          <ProjectComponent name="AWSBlenderResources" desc="New Blender resources" image={Blender} link="#"></ProjectComponent>
-          <ProjectComponent name="Chess" desc="A chess game in python" image={ChessGame} link="#"></ProjectComponent>
-          <ProjectComponent name="Snake" desc="A snake game in python" image={Snake} link="#"></ProjectComponent>
+          <ProjectComponent name="Soccer Quizzes" desc="Web app using FASTAPI" link="https://github.com/QuinPoley/SoccerQuizFrontend" image={soccerquiz}></ProjectComponent>
+          <ProjectComponent name="AWSBlenderResources" desc="New Blender resources" image={Blender} link="https://github.com/QuinPoley/BlenderAwsResources"></ProjectComponent>
+          <ProjectComponent name="Chess" desc="A chess game in python" image={ChessGame} link="https://github.com/QuinPoley/ChessGame"></ProjectComponent>
+          <ProjectComponent name="Snake" desc="A snake game in python" image={Snake} link="https://github.com/QuinPoley/BasicSnakeGame"></ProjectComponent>
           <ProjectComponent name="Lestrade" desc="Extension of sherlock" link="#"></ProjectComponent>
           <ProjectComponent name="HMAC Port Knock" desc="Port Knocking with stream cypher" link="#"></ProjectComponent>
           <ProjectComponent name="WebGL" desc="Website combining react and threejs" link="#"></ProjectComponent>
           <ProjectComponent name="Other" desc="Other projects" image={MyPage} link="#"></ProjectComponent>
         </ProjectDiv>
         <CertDiv>
-          <CertComponent link="#" name="AWS Certified Solution Architect - Associate" desc="Issued July 2020 - Expires July 2023" image={AWS}></CertComponent>
-          <CertComponent link="#" name="Certified ScrumMaster (CSM)" desc="Issued June 2021 - Expires June 2023" image={Scrum}></CertComponent>
-          <CertComponent link="#" name="[PCEP-30-01] PCEP – Certified Entry-Level Python Programmer" desc="Python Entry" image={PCEP}></CertComponent>
+          <CertComponent link="https://www.linkedin.com/company/amazon-web-services/" name="AWS Certified Solution Architect - Associate" desc="Issued July 2020 - Expires July 2023" image={AWS}></CertComponent>
+          <CertComponent link="https://www.knowledgehut.com/agile-management/csm-certification-training?utm_source=google&utm_medium=cpc&utm_campaign=Americas-USD-CSM-S2-Exact_certified%20scrum%20master_{adid}&gclid=CjwKCAjw0qOIBhBhEiwAyvVcf-lXBjRNVOy5p4Hb8dDo6BDnLoyorDy3YXfJmYxjwxc_2lgxKrYhEhoC8aoQAvD_BwE" name="Certified ScrumMaster (CSM)" desc="Issued June 2021 - Expires June 2023" image={Scrum}></CertComponent>
+          <CertComponent link="https://www.linkedin.com/company/python-institute/" name="[PCEP-30-01] PCEP – Certified Entry-Level Python Programmer" desc="Python Entry" image={PCEP}></CertComponent>
+          <CertComponent link="https://www.linkedin.com/company/python-institute/" name="[PCEP-31-03] PCAP – Certified Associate in Python Programmer" desc="Python Entry" image={PCEP}></CertComponent>
         </CertDiv>
       </Page>
     </div>
