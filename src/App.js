@@ -16,6 +16,7 @@ import AWS from './Images/aws.jpg';
 import Scrum from './Images/scrum.jpg';
 import PCEP from './Images/PCEP.jpg';
 import soccerquiz from './Images/soccerquiz.JPG';
+import WebGL from './Images/WebGL.JPG';
 //
 //
 //
@@ -40,7 +41,7 @@ function App() {
           <ProjectComponent name="Snake" desc="A snake game in python" image={Snake} link="https://github.com/QuinPoley/BasicSnakeGame"></ProjectComponent>
           <ProjectComponent name="Lestrade" desc="Extension of sherlock" link="#"></ProjectComponent>
           <ProjectComponent name="HMAC Port Knock" desc="Port Knocking with stream cypher" link="#"></ProjectComponent>
-          <ProjectComponent name="WebGL" desc="Website combining react and threejs" link="#"></ProjectComponent>
+          <ProjectComponent name="WebGL" desc="Website combining react and threejs" image={WebGL} link="#"></ProjectComponent>
           <ProjectComponent name="Other" desc="Other projects" image={MyPage} link="#"></ProjectComponent>
         </ProjectDiv>
         <CertDiv>
