@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.b74ed179.chunk.css",
-    "main.js": "/static/js/main.44b7cd8c.chunk.js",
-    "main.js.map": "/static/js/main.44b7cd8c.chunk.js.map",
+    "main.js": "/static/js/main.417cee1b.chunk.js",
+    "main.js.map": "/static/js/main.417cee1b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9b89de3f.js",
     "runtime-main.js.map": "/static/js/runtime-main.9b89de3f.js.map",
     "static/js/2.bd62fe52.chunk.js": "/static/js/2.bd62fe52.chunk.js",
@@ -15,6 +15,7 @@
     "static/media/Github.bdd48ee8.svg": "/static/media/Github.bdd48ee8.svg",
     "static/media/MyPage.36451d40.JPG": "/static/media/MyPage.36451d40.JPG",
     "static/media/Snake.d9863243.JPG": "/static/media/Snake.d9863243.JPG",
+    "static/media/WebGL.fd538265.JPG": "/static/media/WebGL.fd538265.JPG",
     "static/media/arrow.7ee97ed5.svg": "/static/media/arrow.7ee97ed5.svg",
     "static/media/caret.8532a637.svg": "/static/media/caret.8532a637.svg",
     "static/media/chevron.2cf95fee.svg": "/static/media/chevron.2cf95fee.svg",
@@ -26,6 +27,6 @@
     "static/js/runtime-main.9b89de3f.js",
     "static/js/2.bd62fe52.chunk.js",
     "static/css/main.b74ed179.chunk.css",
-    "static/js/main.44b7cd8c.chunk.js"
+    "static/js/main.417cee1b.chunk.js"
   ]
 }
